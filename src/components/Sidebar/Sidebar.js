@@ -1,8 +1,21 @@
 import React from "react";
 import './Sidebar.css'
 import avatar from "./../../avatar.png";
+ import { ToastContainer, toast } from "react-toastify";
+ import "react-toastify/dist/ReactToastify.css";
+
 
 const Sidebar = () => {
+const notify = () =>
+  toast.success("Successfully Completed", {
+    position: "bottom-left",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: true,
+    progress: undefined,
+  });
   return (
     <div className="p-5 sticky top-0">
       {/* About Me  */}
@@ -86,9 +99,20 @@ const Sidebar = () => {
           <div className="text-gray-500 font-normal">15 seconds</div>
         </div>
       </div>
-      <button className="btn btn-primary w-full mt-5">
+      <button onClick={notify} className="btn btn-primary w-full mt-5">
         Activity Completed
       </button>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover={false}
+      />
     </div>
   );
 };
