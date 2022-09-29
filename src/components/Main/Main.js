@@ -3,12 +3,14 @@ import "./Main.css";
 import Card from "../Card/Card";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
+import Blog from "../Blog/Blog";
+import MobileBlog from "../MobileBlog/MobileBlog";
 
 const Main = () => {
   const [workouts, setWorkouts] = useState([]);
   const [exerciseTime, setExerciseTime] = useState([]);
   const [breakTime, setBreakTime] = useState(0);
-
+  
   const handleAddToList = (time) => {
     const newExerciseTime = [...exerciseTime, time];
     setExerciseTime(newExerciseTime);
@@ -43,6 +45,7 @@ const Main = () => {
                 ))
             )}
           </div>
+          <Blog></Blog>
         </div>
         <div className="col-span-12 lg:col-span-3 second-half bg-white">
           <Sidebar
@@ -52,6 +55,7 @@ const Main = () => {
           ></Sidebar>
         </div>
       </div>
+      <MobileBlog></MobileBlog>
     </div>
   );
 };

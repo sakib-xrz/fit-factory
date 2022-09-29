@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Sidebar.css";
 import avatar from "./../../avatar.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {
+  addToLocalStorage,
+  getFromLocalStorage,
+} from "../../manageLocalStorage";
 
 const Sidebar = ({ exerciseTime, breakTime, handleBreakTime }) => {
+  const [localTime, setLocalTime] = useState([]);
+
+  useEffect(() => {
+    const storedTime = getFromLocalStorage();
+    setLocalTime(storedTime.time);
+  }, [breakTime]);
+
   let totalExerciseTime = 0;
   for (const time of exerciseTime) {
     totalExerciseTime = totalExerciseTime + time;
@@ -64,7 +75,10 @@ const Sidebar = ({ exerciseTime, breakTime, handleBreakTime }) => {
         <div className="flex justify-evenly flex-row w-full">
           <div>
             <button
-              onClick={() => handleBreakTime("20")}
+              onClick={() => {
+                handleBreakTime("20");
+                addToLocalStorage("20");
+              }}
               className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white"
             >
               20
@@ -72,7 +86,10 @@ const Sidebar = ({ exerciseTime, breakTime, handleBreakTime }) => {
           </div>
           <div>
             <button
-              onClick={() => handleBreakTime("30")}
+              onClick={() => {
+                handleBreakTime("30");
+                addToLocalStorage("30");
+              }}
               className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white"
             >
               30
@@ -80,7 +97,10 @@ const Sidebar = ({ exerciseTime, breakTime, handleBreakTime }) => {
           </div>
           <div>
             <button
-              onClick={() => handleBreakTime("40")}
+              onClick={() => {
+                handleBreakTime("40");
+                addToLocalStorage("40");
+              }}
               className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white"
             >
               40
@@ -88,7 +108,10 @@ const Sidebar = ({ exerciseTime, breakTime, handleBreakTime }) => {
           </div>
           <div>
             <button
-              onClick={() => handleBreakTime("50")}
+              onClick={() => {
+                handleBreakTime("50");
+                addToLocalStorage("50");
+              }}
               className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white"
             >
               50
@@ -108,7 +131,9 @@ const Sidebar = ({ exerciseTime, breakTime, handleBreakTime }) => {
       <div className="flex justify-center bg-base-100 py-4 rounded-lg mt-5">
         <div className="flex justify-between items-center w-full px-3">
           <div className="text-xl font-medium">Break time</div>
-          <div className="text-gray-500 font-normal">{breakTime} seconds</div>
+          <div className="text-gray-500 font-normal">
+            {localTime ? localTime : 0} seconds
+          </div>
         </div>
       </div>
       <button onClick={notify} className="btn btn-primary w-full mt-5">
