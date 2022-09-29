@@ -3,6 +3,7 @@ import "./Card.css";
 
 const Card = (props) => {
   const { name, description, ageLimit, timeRequired, img } = props.workout;
+  const { handleAddToList } = props;
   return (
     <div>
       <div className="card rounded-md w-auto bg-base-100 shadow-xl">
@@ -23,6 +24,7 @@ const Card = (props) => {
           </div>
         </div>
         <button
+          onClick={() => handleAddToList(timeRequired)}
           className="btn btn-primary rounded-md rounded-t-none"
         >
           Add to list

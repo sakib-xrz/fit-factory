@@ -4,7 +4,11 @@ import avatar from "./../../avatar.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Sidebar = () => {
+const Sidebar = ({ breakTime }) => {
+  let totalBreakTime = 0;
+  for (const time of breakTime) {
+    totalBreakTime = totalBreakTime + time;
+  }
   const notify = () =>
     toast.success("Successfully Completed", {
       position: "top-left",
@@ -58,11 +62,11 @@ const Sidebar = () => {
       <h2 className="text-2xl font-medium px-2 pt-5 pb-2">Add a Break</h2>
       <div className="flex justify-center bg-base-100 py-4 rounded-lg ">
         <div className="flex justify-evenly flex-row w-full">
-          <div>
+          {/* <div>
             <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
               10
             </button>
-          </div>
+          </div> */}
           <div>
             <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
               20
@@ -89,7 +93,9 @@ const Sidebar = () => {
       <div className="flex justify-center bg-base-100 py-4 rounded-lg">
         <div className="flex justify-between items-center w-full px-3">
           <div className="text-xl font-medium">Exercise time</div>
-          <div className="text-gray-500 font-normal">200 seconds</div>
+          <div className="text-gray-500 font-normal">
+            {totalBreakTime} seconds
+          </div>
         </div>
       </div>
       <div className="flex justify-center bg-base-100 py-4 rounded-lg mt-5">

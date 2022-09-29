@@ -6,6 +6,12 @@ import Sidebar from "../Sidebar/Sidebar";
 
 const Main = () => {
   const [workouts, setWorkouts] = useState([]);
+  const [breakTime, setBreakTime] = useState([]);
+
+  const handleAddToList = (time) => {
+    const newBreakTime = [...breakTime, time];
+    setBreakTime(newBreakTime);
+  };
 
   useEffect(() => {
     fetch("work-out.json")
@@ -25,6 +31,7 @@ const Main = () => {
               (workout) =>
                 (workout = (
                   <Card
+                    handleAddToList={handleAddToList}
                     key={workout.id}
                     workout={workout}
                   ></Card>
@@ -33,7 +40,7 @@ const Main = () => {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-3 second-half bg-white">
-          <Sidebar></Sidebar>
+          <Sidebar breakTime={breakTime}></Sidebar>
         </div>
       </div>
     </div>
