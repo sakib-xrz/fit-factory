@@ -4,11 +4,7 @@ import avatar from "./../../avatar.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Sidebar = ({ seconds }) => {
-  let second = 0;
-  for (const time of seconds) {
-    second = second + time.timeRequired;
-  }
+const Sidebar = () => {
   const notify = () =>
     toast.success("Successfully Completed", {
       position: "top-left",
@@ -93,7 +89,7 @@ const Sidebar = ({ seconds }) => {
       <div className="flex justify-center bg-base-100 py-4 rounded-lg">
         <div className="flex justify-between items-center w-full px-3">
           <div className="text-xl font-medium">Exercise time</div>
-          <div className="text-gray-500 font-normal">{second} seconds</div>
+          <div className="text-gray-500 font-normal">200 seconds</div>
         </div>
       </div>
       <div className="flex justify-center bg-base-100 py-4 rounded-lg mt-5">
