@@ -62,11 +62,6 @@ const Sidebar = ({ breakTime }) => {
       <h2 className="text-2xl font-medium px-2 pt-5 pb-2">Add a Break</h2>
       <div className="flex justify-center bg-base-100 py-4 rounded-lg ">
         <div className="flex justify-evenly flex-row w-full">
-          {/* <div>
-            <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
-              10
-            </button>
-          </div> */}
           <div>
             <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
               20
