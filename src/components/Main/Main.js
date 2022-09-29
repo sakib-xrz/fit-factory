@@ -7,11 +7,15 @@ import Sidebar from "../Sidebar/Sidebar";
 const Main = () => {
   const [workouts, setWorkouts] = useState([]);
   const [exerciseTime, setExerciseTime] = useState([]);
-
+  const [breakTime, setBreakTime] = useState(0);
 
   const handleAddToList = (time) => {
     const newExerciseTime = [...exerciseTime, time];
     setExerciseTime(newExerciseTime);
+  };
+
+  const handleBreakTime = (time) => {
+    setBreakTime(time);
   };
 
   useEffect(() => {
@@ -41,7 +45,11 @@ const Main = () => {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-3 second-half bg-white">
-          <Sidebar exerciseTime={exerciseTime}></Sidebar>
+          <Sidebar
+            breakTime={breakTime}
+            exerciseTime={exerciseTime}
+            handleBreakTime={handleBreakTime}
+          ></Sidebar>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import avatar from "./../../avatar.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Sidebar = ({ exerciseTime }) => {
+const Sidebar = ({ exerciseTime, breakTime, handleBreakTime }) => {
   let totalExerciseTime = 0;
   for (const time of exerciseTime) {
     totalExerciseTime = totalExerciseTime + time;
@@ -63,22 +63,34 @@ const Sidebar = ({ exerciseTime }) => {
       <div className="flex justify-center bg-base-100 py-4 rounded-lg ">
         <div className="flex justify-evenly flex-row w-full">
           <div>
-            <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
+            <button
+              onClick={() => handleBreakTime("20")}
+              className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white"
+            >
               20
             </button>
           </div>
           <div>
-            <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
+            <button
+              onClick={() => handleBreakTime("30")}
+              className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white"
+            >
               30
             </button>
           </div>
           <div>
-            <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
+            <button
+              onClick={() => handleBreakTime("40")}
+              className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white"
+            >
               40
             </button>
           </div>
           <div>
-            <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
+            <button
+              onClick={() => handleBreakTime("50")}
+              className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white"
+            >
               50
             </button>
           </div>
@@ -96,7 +108,7 @@ const Sidebar = ({ exerciseTime }) => {
       <div className="flex justify-center bg-base-100 py-4 rounded-lg mt-5">
         <div className="flex justify-between items-center w-full px-3">
           <div className="text-xl font-medium">Break time</div>
-          <div className="text-gray-500 font-normal">15 seconds</div>
+          <div className="text-gray-500 font-normal">{breakTime} seconds</div>
         </div>
       </div>
       <button onClick={notify} className="btn btn-primary w-full mt-5">
