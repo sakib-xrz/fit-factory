@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
-import "./Main.css"
+import "./Main.css";
 import Card from "../Card/Card";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Main = () => {
   const [workouts, setWorkouts] = useState([]);
+  const [list, setList] = useState([]);
+
+  const handleAddToList = (workout) => {
+    const newList = [...list, workout];
+    setList(newList);
+  };
+
   useEffect(() => {
     fetch("work-out.json")
       .then((res) => res.json())
@@ -22,12 +29,18 @@ const Main = () => {
           <div className="card-group grid grid-cols-1 gap-10 p-5 md:grid-cols-2 lg:grid-cols-3 mb-10">
             {workouts.map(
               (workout) =>
-                (workout = <Card key={workout.id} workout={workout}></Card>)
+                (workout = (
+                  <Card
+                    key={workout.id}
+                    workout={workout}
+                    handleAddToList={handleAddToList}
+                  ></Card>
+                ))
             )}
           </div>
         </div>
         <div className="col-span-12 lg:col-span-3 second-half bg-white">
-          <Sidebar></Sidebar>
+          <Sidebar seconds={list}></Sidebar>
         </div>
       </div>
     </div>
