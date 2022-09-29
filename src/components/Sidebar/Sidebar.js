@@ -4,10 +4,10 @@ import avatar from "./../../avatar.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Sidebar = ({ breakTime }) => {
-  let totalBreakTime = 0;
-  for (const time of breakTime) {
-    totalBreakTime = totalBreakTime + time;
+const Sidebar = ({ exerciseTime }) => {
+  let totalExerciseTime = 0;
+  for (const time of exerciseTime) {
+    totalExerciseTime = totalExerciseTime + time;
   }
   const notify = () =>
     toast.success("Successfully Completed", {
@@ -89,7 +89,7 @@ const Sidebar = ({ breakTime }) => {
         <div className="flex justify-between items-center w-full px-3">
           <div className="text-xl font-medium">Exercise time</div>
           <div className="text-gray-500 font-normal">
-            {totalBreakTime} seconds
+            {totalExerciseTime} seconds
           </div>
         </div>
       </div>
