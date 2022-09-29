@@ -4,7 +4,7 @@ import logo from './../../logo-transparent.png'
 
 const Header = () => {
     return (
-      <div className="container mx-auto shadow-lg rounded-b-md">
+      <div className="shadow-lg rounded-b-md">
         <div className="navbar flex justify-center">
           <a href="/" className="text-center">
             <img className="logo" src={logo} alt="" />

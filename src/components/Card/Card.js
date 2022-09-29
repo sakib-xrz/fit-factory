@@ -16,7 +16,7 @@ const Card = (props) => {
             <p className="text-gray-500">{description.slice(0, 55) + "..."}</p>
             <div className="pt-3 font-medium">
               <p>For Age : {ageLimit}</p>
-              <p>Time required : {timeRequired}</p>
+              <p>Time required : {timeRequired}<small>s</small></p>
             </div>
           </div>
         </div>

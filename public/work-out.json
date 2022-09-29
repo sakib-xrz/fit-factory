@@ -5,7 +5,7 @@
     "description": "Activate your core and posterior chain with a bridge. This is a great exercise to use as a warmup.",
     "img": "https://i.ibb.co/GTGSLhX/Bridge.gif",
     "ageLimit": "20-25",
-    "timeRequired": 10
+    "timeRequired": 30
   },
   {
     "id": "13cbc7ed",
@@ -13,7 +13,7 @@
     "description": "Squat to strengthen your legs and core, which will make everyday movements easier. Starting with a chair underneath you will help you master proper form.",
     "img": "https://i.ibb.co/ZJndXQ3/Chair-squat.gif",
     "ageLimit": "20-25",
-    "timeRequired": 5
+    "timeRequired": 50
   },
   {
     "id": "307f166f",
@@ -21,7 +21,7 @@
     "description": "A beginner-style pushup, this move will help you build strength before attempting a standard pushup.",
     "img": "https://i.ibb.co/mCNgPJW/Knee-pushup.gif",
     "ageLimit": "20-25",
-    "timeRequired": 10
+    "timeRequired": 40
   },
   {
     "id": "4bf9798f",
@@ -29,7 +29,7 @@
     "description": "Hit your quads, hamstrings, and glutes with a stationary lunge.",
     "img": "https://i.ibb.co/SvPNxdv/Stationary-lunge.gif",
     "ageLimit": "20-25",
-    "timeRequired": 5
+    "timeRequired": 50
   },
   {
     "id": "9496d72b",
@@ -37,7 +37,7 @@
     "description": "This move will test your upper body, especially your shoulders. Who says you need weights for a shoulder workout?",
     "img": "https://i.ibb.co/njL6pDr/Plank-to-Downward-Dog.gif",
     "ageLimit": "20-25",
-    "timeRequired": 10
+    "timeRequired": 30
   },
   {
     "id": "6e5593d3",
@@ -45,7 +45,7 @@
     "description": "Build those glutes with donkey kicks.",
     "img": "https://i.ibb.co/YtLXH0y/donkey-kick.gif",
     "ageLimit": "20-25",
-    "timeRequired": 5
+    "timeRequired": 40
   },
   {
     "id": "9c0c13c2",
@@ -53,7 +53,7 @@
     "description": "A full-body move that requires balance and stability, the Bird Dog pose is easily scalable to your ability level. Start with this version if you’re a beginner.",
     "img": "https://i.ibb.co/HzZg34G/Bird-Dog.gif",
     "ageLimit": "20-25",
-    "timeRequired": 10
+    "timeRequired": 50
   },
   {
     "id": "c9d1f410",
@@ -61,7 +61,7 @@
     "description": "A full-body exercise that requires strength and balance, planks put the core into overdrive.",
     "img": "https://i.ibb.co/k1XwjHF/Forearm-plank.gif",
     "ageLimit": "20-25",
-    "timeRequired": 10
+    "timeRequired": 30
   },
   {
     "id": "1564a06b",
@@ -69,6 +69,6 @@
     "description": "Although you’ll work your core with almost all of these strength exercises, a targeted ab move doesn’t hurt.",
     "img": "https://i.ibb.co/T4ggqj9/Bicycle-crunch.gif",
     "ageLimit": "20-25",
-    "timeRequired": 5
+    "timeRequired": 40
   }
 ]

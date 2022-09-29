@@ -8,11 +8,11 @@ import avatar from "./../../avatar.png";
 const Sidebar = () => {
 const notify = () =>
   toast.success("Successfully Completed", {
-    position: "bottom-left",
+    position: "top-left",
     autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
-    pauseOnHover: false,
+    pauseOnHover: true,
     draggable: true,
     progress: undefined,
   });
@@ -58,28 +58,28 @@ const notify = () =>
       {/* Break  */}
       <h2 className="text-2xl font-medium px-2 pt-5 pb-2">Add a Break</h2>
       <div className="flex justify-center bg-base-100 py-4 rounded-lg ">
-        <div className="flex justify-evenly w-full">
-          <div className="">
+        <div className="flex justify-evenly flex-row w-full">
+          <div>
             <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
               10
             </button>
           </div>
-          <div className="">
+          <div>
             <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
               20
             </button>
           </div>
-          <div className="">
+          <div>
             <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
               30
             </button>
           </div>
-          <div className="">
+          <div>
             <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
               40
             </button>
           </div>
-          <div className="">
+          <div>
             <button className="btn rounded-full bg-white border-0 text-black hover:bg-primary hover:text-white">
               50
             </button>
@@ -103,7 +103,7 @@ const notify = () =>
         Activity Completed
       </button>
       <ToastContainer
-        position="bottom-left"
+        position="top-left"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
